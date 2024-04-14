@@ -33,7 +33,8 @@ describe("test validator form", () => {
     await input.type("5536913867557809");
     const submit = await page.$("#btnNumber");
     await submit.click();
-    await page.waitForSelector(".cardActiv");
+    const elem = await page.waitForSelector(".cardActiv");
+    expect(elem).toBeTruthy();
   }, 35000);
 
   test("mir", async () => {
@@ -42,7 +43,8 @@ describe("test validator form", () => {
     await input.type("2202202345824738");
     const submit = await page.$("#btnNumber");
     await submit.click();
-    await page.waitForSelector(".cardActiv");
+    const elem = await page.waitForSelector(".cardActiv");
+    expect(elem).toBeTruthy();
   }, 35000);
 
   test("not valid", async () => {
@@ -51,7 +53,8 @@ describe("test validator form", () => {
     await input.type("22022023458247389");
     const submit = await page.$("#btnNumber");
     await submit.click();
-    await page.waitForSelector(".message-fols");
+    const elem = await page.waitForSelector(".message-fols");
+    expect(elem).toBeTruthy();
   }, 35000);
 
   afterAll(async () => {
