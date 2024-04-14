@@ -1,0 +1,20 @@
+body {
+    color: #999;  
+}
+
+.message {
+    display: flex;
+    gap: 30px;
+}
+
+.message-true {
+    color: green;
+    font-size: large;
+}
+
+.message-fols {
+    color: red;
+    font-size: large;
+}
+
+
